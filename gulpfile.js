@@ -1,10 +1,11 @@
 var gulp	= require('gulp'),
 	sass	= require('gulp-sass'),
-	del		= require('del'),
-	rigger	= require('gulp-rigger');
+    rigger  = require('gulp-rigger'),
+	del		= require('del');
+	
 
 //Дефолтный таск ---------------------------------------------------+
-// gulp.task('default', ['clean', 'sass']);
+// gulp.task('default', ['clean', 'html:build']);
 
 //Работа со стилями ------------------------------------------------+
 // gulp.task('sass', ()=> {
@@ -14,7 +15,7 @@ var gulp	= require('gulp'),
 // });
 
 //Чистка -----------------------------------------------------------+
-gulp.task('clean', ()=> {
+gulp.task('clear', ()=> {
 	del.sync('build/*');
 });
 
@@ -31,7 +32,7 @@ var path = {
         fonts: 'build/fonts/'
     },
     src: { //Пути откуда брать исходники
-        html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+        html: 'src/[^_]*.html', //'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/main.js',
         style: 'src/**/.scss',
         img: 'src/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
@@ -54,14 +55,24 @@ gulp.task('html:build', function () {
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
         //.pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
-
-// Сборка js
+// Сборка css ------------------------------------------------------+
+gulp.task('style:build', function () {
+    gulp.src(path.src.style) //Выберем наш main.scss
+        //.pipe(sourcemaps.init()) //То же самое что и с js
+        .pipe(sass()) //Скомпилируем
+        //.pipe(prefixer()) //Добавим вендорные префиксы
+        //.pipe(cssmin()) //Сожмем
+        //.pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.build.css)) //И в build
+        //.pipe(reload({stream: true}));
+});
+// Сборка js -------------------------------------------------------+
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
-        .pipe(sourcemaps.init()) //Инициализируем sourcemap
-        .pipe(uglify()) //Сожмем наш js
-        .pipe(sourcemaps.write()) //Пропишем карты
+        //.pipe(sourcemaps.init()) //Инициализируем sourcemap
+        //.pipe(uglify()) //Сожмем наш js
+        //.pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
-        .pipe(reload({stream: true})); //И перезагрузим сервер
+        //.pipe(reload({stream: true})); //И перезагрузим сервер
 });
