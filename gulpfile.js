@@ -1,7 +1,12 @@
-var gulp	= require('gulp'),
-	sass	= require('gulp-sass'),
-    rigger  = require('gulp-rigger'),
-	del		= require('del');
+'use strict';
+
+var gulp	    = require('gulp'),
+	sass	    = require('gulp-sass'),
+    rigger      = require('gulp-rigger'),
+    sourcemaps  = require('gulp-sourcemaps'),
+    browserSync = require("browser-sync"),
+	del		    = require('del'),
+    reload      = browserSync.reload;
 	
 
 //Дефолтный таск ---------------------------------------------------+
@@ -32,9 +37,9 @@ var path = {
         fonts: 'build/fonts/'
     },
     src: { //Пути откуда брать исходники
-        html: 'src/[^_]*.html', //'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: 'src/main.js',
-        style: 'src/**/.scss',
+        html: 'src/*.html',//'src/[^_]*.html',  //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+        js: 'src/*.js',
+        style: 'src/**/*.scss',
         img: 'src/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
     },
@@ -75,4 +80,22 @@ gulp.task('js:build', function () {
         //.pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         //.pipe(reload({stream: true})); //И перезагрузим сервер
+});
+// Отслеживание изменений
+gulp.task('watch', function(){
+    gulp.watch([path.watch.html], function(event, cb) {
+        gulp.start('html:build');
+    });
+    gulp.watch([path.watch.style], function(event, cb) {
+        gulp.start('style:build');
+    });
+    gulp.watch([path.watch.js], function(event, cb) {
+        gulp.start('js:build');
+    });
+    // watch([path.watch.img], function(event, cb) {
+    //     gulp.start('image:build');
+    // });
+    // watch([path.watch.fonts], function(event, cb) {
+    //     gulp.start('fonts:build');
+    // });
 });
