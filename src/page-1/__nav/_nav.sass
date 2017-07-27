@@ -1,32 +1,36 @@
 .nav
+	position: relative
 .nav__list
-	margin: 145px 0px 0px 498px
+	position: absolute
+	margin: 0 0 0 589px
+	transform: rotate(-45deg)
+	width: 588px
 
 .nav__rhomb
 	text-decoration: none
 	border: 1px solid #fff
-	margin-left: 55px
-	margin: 0 0 10 55px
-	width: 140px
-	height: 140px
+	width: 138px
+	height: 138px
 	display: inline-block
-	transform: rotate(45deg)
 	background-size: cover
 	overflow: hidden
 
+.nav__rhomb[hidden=true] 
+  	visibility: hidden
+
 .nav__item
 	text-align: center
-	width: 290px
-	height: 290px
+	width: 200px
+	height: 200px
 	display: inline-block
-	transform: rotate(-45deg)
-	// margin-top: 25px
+	transform: rotate(45deg)
+	margin: 15px 0 0 -80px;
 	font-size: 25pt
 
 .nav__list_img
     width: 152%
     height: 110%
-    margin: -48px 0px 0 -59px
+    margin: -65px 0px 0 -96px;
 
 .nav__list_ico
 	
