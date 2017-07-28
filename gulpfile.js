@@ -12,7 +12,7 @@ var gulp	     = require('gulp'),
 	
 
 //Дефолтный таск ---------------------------------------------------+
-gulp.task('default', ['clean', 'build', 'watch']);
+gulp.task('default', ['clean', 'build', 'webserver', 'watch']);
 
 //Работа со стилями ------------------------------------------------+
 // gulp.task('sass', ()=> {
@@ -74,20 +74,18 @@ gulp.task('html:build', ()=> {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
         .pipe(rigger()) //Прогоним через rigger
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
-        //.pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 // Сборка css ------------------------------------------------------+
-gulp.task('style:build', ()=> {
+gulp.task('style:build', wrapPipe(function(success, error) {
     gulp.src(path.src.style) //Выберем наш main.scss
-        //.pipe(sourcemaps.init()) //То же самое что и с js
-        .pipe(sass()) //Скомпилируем
+        .pipe(sass().on('error', error)) //Скомпилируем
         //.pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-        .pipe(prefixer()) //Добавим вендорные префиксы
+        .pipe(prefixer().on('error', error)) //Добавим вендорные префиксы
         //.pipe(cssmin()) //Сожмем
-        //.pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css)) //И в build
-        //.pipe(reload({stream: true}));
-});
+        .pipe(reload({stream: true}));
+}));
 
 // Сборка js -------------------------------------------------------+
 gulp.task('js:build', ()=> {
@@ -97,7 +95,7 @@ gulp.task('js:build', ()=> {
         //.pipe(uglify()) //Сожмем наш js
         //.pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
-        //.pipe(reload({stream: true})); //И перезагрузим сервер
+        .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 
 // Сборка изображений ----------------------------------------------+
@@ -110,7 +108,7 @@ gulp.task('image:build', ()=> {
             interlaced: true
         }))
         .pipe(gulp.dest(path.build.img)) //И бросим в build
-        //.pipe(reload({stream: true}));
+        .pipe(reload({stream: true}));
 });
 
 // Сборка шрифтоф --------------------------------------------------+
@@ -146,3 +144,22 @@ gulp.task('watch', function(){
         gulp.start('fonts:build');
     });
 });
+
+
+
+
+
+function wrapPipe(taskFn) {
+  return function(done) {
+    var onSuccess = function() {
+      done();
+    };
+    var onError = function(err) {
+      done(err);
+    }
+    var outStream = taskFn(onSuccess, onError);
+    if(outStream && typeof outStream.on === 'function') {
+      outStream.on('end', onSuccess);
+    }
+  }
+}
