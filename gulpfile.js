@@ -8,9 +8,11 @@ var gulp	     = require('gulp'),
     prefixer     = require('gulp-autoprefixer'),
     //notify       = require('gulp-notify'),
     //plumber      = require('gulp-plumber'),
-    browserSync  = require("browser-sync"),
+    watch        = require('gulp-watch'),
+    browserSync  = require('browser-sync'),
 	del		     = require('del'),
     reload       = browserSync.reload;
+
 	
 
 //Дефолтный таск ---------------------------------------------------+
@@ -72,7 +74,7 @@ gulp.task('html:build', ()=> {
 gulp.task('style:build', ()=>{
     gulp.src(path.src.style)
         .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-        //.pipe(plumber())
+        //.pipe(setTimeout(sass({outputStyle:'expanded'}).on('error',sass.logError), 500))
         .pipe(prefixer())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
@@ -119,20 +121,21 @@ gulp.task('build', [
 
 // Отслеживание изменений ------------------------------------------+
 gulp.task('watch', ()=> {
-    gulp.watch([path.watch.html], function(event, cb) {
+    watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
-    gulp.watch([path.watch.style], function(event, cb) {
-        gulp.start('style:build');
-    });
+
     // gulp.watch([path.watch.js], function(event, cb) {
     //     gulp.start('js:build');
     // });
-    gulp.watch([path.watch.img], function(event, cb) {
+    watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');
     });
-    gulp.watch([path.watch.fonts], function(event, cb) {
+    watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
+    });
+    watch([path.watch.style], {readDelay: 200}, function(event, cb) {
+        gulp.start('style:build');
     });
 });
 
