@@ -6,6 +6,8 @@ var gulp	     = require('gulp'),
     sourcemaps   = require('gulp-sourcemaps'),
     imagemin     = require('gulp-imagemin'),
     prefixer     = require('gulp-autoprefixer'),
+    //notify       = require('gulp-notify'),
+    //plumber      = require('gulp-plumber'),
     browserSync  = require("browser-sync"),
 	del		     = require('del'),
     reload       = browserSync.reload;
@@ -13,13 +15,6 @@ var gulp	     = require('gulp'),
 
 //Дефолтный таск ---------------------------------------------------+
 gulp.task('default', ['clean', 'build', 'webserver', 'watch']);
-
-//Работа со стилями ------------------------------------------------+
-// gulp.task('sass', ()=> {
-// 	gulp.src(['', 'css/*.scss']) //выбираем все исходники
-// 		.pipe(sass({outputStyle:'expanded'}).on('error',sass.logError)) //компилируем и выводим ошибки
-// 		.pipe(gulp.dest('build/css'));
-// });
 
 // Сервер ----------------------------------------------------------+
 var config = {
@@ -40,9 +35,6 @@ gulp.task('clean', ()=> {
 	del.sync('build/*');
 });
 
-gulp.task('test', ()=> {
-	console.log("test!!!");
-});
 // PATH ------------------------------------------------------------+
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -77,15 +69,14 @@ gulp.task('html:build', ()=> {
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 // Сборка css ------------------------------------------------------+
-gulp.task('style:build', wrapPipe(function(success, error) {
-    gulp.src(path.src.style) //Выберем наш main.scss
-        .pipe(sass().on('error', error)) //Скомпилируем
-        //.pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-        .pipe(prefixer().on('error', error)) //Добавим вендорные префиксы
-        //.pipe(cssmin()) //Сожмем
-        .pipe(gulp.dest(path.build.css)) //И в build
+gulp.task('style:build', ()=>{
+    gulp.src(path.src.style)
+        .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+        //.pipe(plumber())
+        .pipe(prefixer())
+        .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
-}));
+});
 
 // Сборка js -------------------------------------------------------+
 gulp.task('js:build', ()=> {
@@ -127,7 +118,7 @@ gulp.task('build', [
 ]);
 
 // Отслеживание изменений ------------------------------------------+
-gulp.task('watch', function(){
+gulp.task('watch', ()=> {
     gulp.watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
@@ -149,17 +140,3 @@ gulp.task('watch', function(){
 
 
 
-function wrapPipe(taskFn) {
-  return function(done) {
-    var onSuccess = function() {
-      done();
-    };
-    var onError = function(err) {
-      done(err);
-    }
-    var outStream = taskFn(onSuccess, onError);
-    if(outStream && typeof outStream.on === 'function') {
-      outStream.on('end', onSuccess);
-    }
-  }
-}
