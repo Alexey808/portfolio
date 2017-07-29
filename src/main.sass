@@ -9,14 +9,27 @@ body, .main
 	min-width: 1600px
 	margin: auto
 	
-._href
-	text-decoration: none
-.wrap
+.g-wrap
 	position: relative
-	margin: auto
+	margin-left: auto
+	margin-right: auto
 	padding: 0px
 	width: 1600px
-//[hidden] { display: none; }
+
+.g-rhomb
+	// position: absolute
+	text-decoration: none
+	background-size: cover
+	overflow: hidden
+	transform: rotate(-45deg)
+
+.g-textPinc
+	color: $colorPink
+.g-textWhite
+	color: #fff
+.g-fonPinc
+	background-color: $colorPink
+
 /* --- page-1.html ----------------------------------------------- */
 @import page-1/page-1
 @import page-1/__logo/logo
@@ -24,4 +37,10 @@ body, .main
 @import page-1/__menu/menu 
 @import page-1/__social/social
 @import page-1/__nextPages/nextPages
+/* --- page-2.html ----------------------------------------------- */
+@import page-2/page-2
+@import page-2/__title/title
+@import page-2/__content/content
+@import page-2/__rhomb/rhomb
+
 
