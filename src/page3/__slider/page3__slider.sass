@@ -1,11 +1,13 @@
 .page3__slider
 	position: absolute
 	right: 97px
-	bottom: 159px
+	bottom: 140px
+	
+
 .page3__slider-buttonNext
 .page3__slider-buttonBack
-.page3__sliser-box
-	position: 
+.page3__sliser-boxItem
+	
 .page3__slider-item
 	width: 532px
 	height: 390px
@@ -13,15 +15,26 @@
 	background-size: cover
 	display: none
 
-.page3__slider-indicator1
-	background-color: $fonPinc
-	height: 10px
-	width: 10px
-	z-index: 1
-	margin: 20px
-.page3__slider-indicator2
-.page3__slider-indicator3
+.page3__slider-boxIndicator
 
+	margin-bottom: -30px
+	margin-top: 29px
+	
+	text-align: center
+.page3__slider-indicator1
+	//position: absolute
+	background-color: $colorPink
+	height: 12px
+	width: 12px
+	margin: 0 5px 5px 5px 
+	
+	
+	transform: rotate(-45deg)
+	display: inline-block
+.page3__slider-indicator2
+	@extend .page3__slider-indicator1
+.page3__slider-indicator3
+	@extend .page3__slider-indicator1
 .page3__slider-item_active
 	display: inline-block
 .page3__slider-indicator_active 
