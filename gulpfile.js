@@ -75,7 +75,7 @@ gulp.task('style:build', ()=>{
     gulp.src(path.src.style)
         .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
         //.pipe(setTimeout(sass({outputStyle:'expanded'}).on('error',sass.logError), 500))
-        .pipe(prefixer())
+        //.pipe(prefixer())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
