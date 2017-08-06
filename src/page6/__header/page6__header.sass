@@ -5,11 +5,61 @@
 	height: 163px
 	top: 0px
 	left: 0px
+	padding-top: 60px
+
+
+/*Родительский элемент для: 
+	.page6__header-arrowBack 
+	.page6__header-arrowNext*/
+.page6__header-arrow 
+	+rhomb()
+	background-color: $colorPink
+	top: 35px
+	i 
+		transform: rotate(45deg)
+		color: #fff
+		position: absolute
+		top: 5px
+
+		font-size: 36pt
+
 .page6__header-arrowBack
+	@extend .page6__header-arrow
+	left: -36px
+	i 
+		left: 25px
+
 .page6__header-arrowNext
+	@extend .page6__header-arrow
+	right: -36px
+	i 
+		top: 14px
+		right: 22px
+
 .page6__header-img
+	position: relative
 	display: inline-block
-	width: 327.5px
-	img 
-		width: 240px
-		height: 50px
+	width: 260px
+	height: 90px
+	top: 9px
+.page6__header-img_audiojungle
+	background: url(../img/audiojungle.png) no-repeat
+	background-size: 73%	
+	//top: 8px
+	left: 5px
+.page6__header-img_3docean
+	background: url(../img/3docean.png) no-repeat
+	background-size: 59%
+	//top: 17px
+	left: 30px
+
+.page6__header-img_themeforest
+	background: url(../img/themeforest.png) no-repeat
+	background-size: 77%
+	//top: 21px
+	left: 29px
+.page6__header-img_graphicriver
+	background: url(../img/graphicriver.png) no-repeat
+	background-size: 80%
+	//top: 25px
+	left: 47px
