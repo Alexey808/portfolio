@@ -114,7 +114,7 @@ gulp.task('fonts:build', ()=> {
 gulp.task('build', [
     'html:build',
     'style:build',
-    //'js:build',
+    'js:build',
     'image:build',
     'fonts:build'
 ]);
@@ -124,10 +124,9 @@ gulp.task('watch', ()=> {
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
-
-    // gulp.watch([path.watch.js], function(event, cb) {
-    //     gulp.start('js:build');
-    // });
+    watch([path.watch.js], function(event, cb) {
+         gulp.start('js:build');
+     });
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');
     });
