@@ -25,11 +25,11 @@ $(function() {
 		var val = index.getAttribute('value'); //получаем значение атрибута
 		if (val >= 100) { 
 			var parent = index.parentNode; //определяем родителя
-			parent.classList.add('hundred'); //добавляем родителю класс
+			parent.classList.add('page8__item-circle_hundred'); //добавляем родителю класс
 			index.classList.add('dial_marging'); //добавляем текщ элементу класс
 		} else if (val < 100) {
 			var parent = index.parentNode;
-			parent.classList.remove('hundred'); //удаляем у родителя класс
+			parent.classList.remove('page8__item-circle_hundred'); //удаляем у родителя класс
 			index.classList.remove('dial_marging'); //удаляем у текщ элемента класс
 		} else { return; }
 	});
