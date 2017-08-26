@@ -25,12 +25,12 @@ $(function() {
 		var val = index.getAttribute('value'); //получаем значение атрибута
 		if (val >= 100) { 
 			var parent = index.parentNode; //определяем родителя
-			parent.classList.add('page8__item-circle_hundred'); //добавляем родителю класс
-			index.classList.add('dial_marging'); //добавляем текщ элементу класс
+			//index.classList.add('dial_marging_hundred'); //добавляем текщ элементу класс
+			parent.classList.add('dial_marging_hundred-postfix');
 		} else if (val < 100) {
 			var parent = index.parentNode;
-			parent.classList.remove('page8__item-circle_hundred'); //удаляем у родителя класс
-			index.classList.remove('dial_marging'); //удаляем у текщ элемента класс
+			//parent.classList.remove('dial_marging_hundred'); //удаляем у родителя класс
+			index.classList.remove('dial_marging_hundred-postfix'); //удаляем у текщ элемента класс
 		} else { return; }
 	});
 })();

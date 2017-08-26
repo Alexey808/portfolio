@@ -1,29 +1,37 @@
-.dial[style]
-	color: #a4a4a4 !important
-	margin-left: -145px !important
-	font-size: 33pt
-
-.dial_marging[style]
-	margin-left: -144px !important
+.page8__item-title
+	color: #737373
+	letter-spacing: 0.5px
+	font-size: 14pt
 
 .page8__item-circle
 	display: inline-block
 	position: relative
 	margin-bottom: 2px
 
-.page8__item-title
-	color: #737373
-	letter-spacing: 0.5px
-	font-size: 14pt
-
-
-.page8__item-circle_hundred:after
-	left: 116px
-
 .page8__item-circle_postfix:after
 	content: '%'
+	font-family: $textFont
 	color: #a4a4a4
 	position: absolute
-	top: 61px
-	left: 98px
-	font-size: 32pt
+	top: 65px
+	left: 90px
+	font-size: 28pt
+
+/*переопределяем стили диограммы*/
+.dial[style] 
+	color: #a4a4a4 !important
+	margin-left: -145px !important
+	font-size: 28pt
+	font-family: $textFont
+
+/*добавляется скриптом, если [value=100], отступ значение*/
+.dial_marging_hundred[style]
+	//margin-left: -144px !important
+
+/*если значение становится 3 значным, отступ постфиксу*/
+.dial_marging_hundred-postfix:after
+	left: 97px !important
+
+
+
+	
