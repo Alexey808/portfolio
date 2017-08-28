@@ -2,7 +2,9 @@
 	text-align: center
 	margin-left: 0px
 	padding: 0px
+	
 .page10__item
+	position: relative
 	display: inline-block
 	background-color: #fff
 	width: 345px
@@ -17,10 +19,20 @@
 	font-size: 38pt
 .page10__item-text
 	font-size: 15pt
-	margin-top: 38px
+	margin-top: 28px
+	
+	margin-left: -10px
 .page10__item-text p
 	margin: auto
+	padding: 8.5px 0
 	border-bottom: 1px solid #737373
 	width: 278px
-	height: 36px
+.page10__item-text p:last-child
+	border-bottom: none;
+
 .page10__item-button 
+	+button
+	bottom: -35px
+	left: 67.5px
+	width: 200px
+	background-color: #737373
