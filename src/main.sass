@@ -3,7 +3,7 @@
 
 $colorPink: #e13c98
 $textFont: HomisioNova
-
+$colorGrey: #737373
 body, .main
 	margin: 0px
 	padding: 0px
@@ -60,6 +60,15 @@ body, .main
 	background-size: cover
 	overflow: hidden
 	transform: rotate(-45deg)
+
+=form()
+	height: 90px
+	background-color: rgba(115, 115, 115, 0.2)
+	border: none
+	color: $colorGrey
+	font-size: 17pt
+	padding-left: 20px
+	
 
 /* --- page-1.html ----------------------------------------------- */
 @import page-1/page-1
@@ -118,7 +127,13 @@ body, .main
 @import page11/__text/page11__text
 @import page11/__email/page11__email
 @import page11/__button/page11__button
-
+/* --- page12.html ------------------------------------------------ */
+@import page12/page12
+@import page12/__title/page12__title
+@import page12/__text/page12__text
+@import page12/__form/page12__form
+@import page12/__soc/page12__soc
+@import page12/__footer/page12__footer
 
 
 
