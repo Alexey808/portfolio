@@ -1,0 +1,1 @@
+console.log('connect: slider-list__item.js');

@@ -1,0 +1,1 @@
+console.log('connect: feature__pictures.js');

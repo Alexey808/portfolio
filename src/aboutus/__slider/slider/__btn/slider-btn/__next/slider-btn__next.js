@@ -1,0 +1,1 @@
+console.log('connect: slider-btn__next.js');

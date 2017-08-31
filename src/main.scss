@@ -1,0 +1,107 @@
+/* --- base ------------------------------------------------------ */
+@import 'font';
+
+$colorPink: #e13c98;
+$textFont: HomisioNova;
+$colorGrey: #737373;
+
+body, .main {
+	margin: 0px;
+	padding: 0px;
+}
+.main {
+	min-width: 1600px
+	margin: auto
+}
+.g-wrap {
+	position: relative
+	margin-left: auto
+	margin-right: auto
+	padding: 0px
+	width: 1280px
+	border-left: 1px dashed red
+	border-right: 1px dashed red
+}
+.g-rhomb {
+	// position: absolute
+	text-decoration: none
+	background-size: cover
+	overflow: hidden
+	transform: rotate(-45deg)
+}
+.g-textPinc {
+	color: $colorPink !important
+}
+.g-textWhite {
+	color: #fff !important
+}
+.g-fonPinc {
+	background-color: $colorPink !important
+}
+
+
+@mixin title()
+	color: #737373
+	text-align: center
+	font-size: 31pt
+	font-family: $textFont
+	letter-spacing: -0.5px
+	
+@mixin button()
+	position: absolute
+	background-color: $colorPink
+	color: #fff
+	text-align: center
+	padding: 20px 5px 22px 5px
+	letter-spacing: 1.7px
+	font-family: $textFont
+	font-size: 19pt
+
+@mixin rhomb()
+	width: 70px
+	height: 70px
+	position: absolute
+	background-size: cover
+	overflow: hidden
+	transform: rotate(-45deg)
+
+@mixin form()
+	height: 80px
+	background-color: rgba(115, 115, 115, 0.2)
+	border: none
+	color: $colorGrey
+	font-size: 17pt
+	padding-left: 20px
+	
+
+/* --- intro.html ------------------------------------------------ */
+
+/* --- whatwedo.html --------------------------------------------- */
+
+/* --- aboutus.html ---------------------------------------------- */
+
+/* --- services.html --------------------------------------------- */
+
+/* --- feature.html ---------------------------------------------- */
+
+/* --- testimonials.html ----------------------------------------- */
+
+/* --- posts.html ------------------------------------------------ */
+
+/* --- skills.html ----------------------------------------------- */
+
+/* --- portfolio.html -------------------------------------------- */
+
+/* --- offers.html ----------------------------------------------- */
+
+/* --- subscribe.html -------------------------------------------- */
+
+/* --- getintouch.html ------------------------------------------- */
+
+/* --- footer.html ----------------------------------------------- */
+
+
+
+.rhomb {}
+.rhomb__title {}
+.rhomb__text {}

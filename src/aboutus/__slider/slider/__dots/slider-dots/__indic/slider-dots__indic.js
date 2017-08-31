@@ -1,0 +1,1 @@
+console.log('connect: slider-dots__indic.js');
