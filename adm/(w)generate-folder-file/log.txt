@@ -57,3 +57,6 @@ testimonials\__slider\slider\__list\slider-list\__item\item\__rhomb\rhomb\__img\
 testimonials\__slider\slider\__list\slider-list\__item\item\__title
 testimonials\__slider\slider\__list\slider-list\__item\item\__title\item__title.scss
 testimonials\__slider\slider\__list\slider-list\__item\item\__title\item__title.js
+
+----------------------------------------------------------
+
