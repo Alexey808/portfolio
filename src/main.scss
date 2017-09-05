@@ -75,16 +75,102 @@ body, .main {
 	
 
 /* --- intro.html ------------------------------------------------ */
+@import 'intro/intro';
+@import 'intro/__logo/intro__logo';
+@import 'intro/__menubars/intro__menubars';
+@import 'intro/__menubars/menubars/menubars';
+@import 'intro/__menubars/menubars/__rhomb/menubars__rhomb';
+@import 'intro/__menubars/menubars/__rhomb/rhomb/rhomb';
+@import 'intro/__menubars/menubars/__rhomb/rhomb/__ico/rhomb__ico';
+@import 'intro/__menus/intro__menus';
+@import 'intro/__menus/munus/menus';
+@import 'intro/__menus/munus/__rhomb/menus__rhomb';
+@import 'intro/__menus/munus/__rhomb/rhomb/rhomb';
+@import 'intro/__menus/munus/__rhomb/rhomb/__ico/rhomb__ico';
+@import 'intro/__menus/munus/__rhomb/rhomb/__pic/rhomb__pic';
+@import 'intro/__menus/munus/__rhomb/rhomb/__title/rhomb__title';
+@import 'intro/__scroller/intro__scroller';
+@import 'intro/__scroller/scroller/scroller';
+@import 'intro/__scroller/scroller/__rhomb/rhomb/rhomb';
+@import 'intro/__scroller/scroller/__rhomb/rhomb/__ico/rhomb__ico';
+@import 'intro/__scroller/scroller/__rhomb/scroller__rhomb';
+@import 'intro/__socials/intro__socials';
+@import 'intro/__socials/socials/socials';
+@import 'intro/__socials/socials/__rhomb/rhomb/rhomb';
+@import 'intro/__socials/socials/__rhomb/rhomb/__ico/rhomb__ico';
+@import 'intro/__socials/socials/__rhomb/socials__rhomb';
 
 /* --- whatwedo.html --------------------------------------------- */
+@import 'whatwedo/whatwedo';
+@import 'whatwedo/__rhomb/rhomb/rhomb';
+@import 'whatwedo/__rhomb/rhomb/__text/rhomb__text';
+@import 'whatwedo/__rhomb/rhomb/__title/rhomb__title';
+@import 'whatwedo/__rhomb/whatwedo__rhomb';
+@import 'whatwedo/__text/whatwedo__text';
+@import 'whatwedo/__title/whatwedo__title';
 
 /* --- aboutus.html ---------------------------------------------- */
+@import 'aboutus/__btn/aboutus__btn';
+@import 'aboutus/__line/aboutus__line';
+@import 'aboutus/__line-head/aboutus__line-head';
+@import 'aboutus/__slider/aboutus__slider';
+@import 'aboutus/__slider/slider/slider';
+@import 'aboutus/__slider/slider/__btn/slider-btn/slider-btn';
+@import 'aboutus/__slider/slider/__btn/slider-btn/__back/slider-btn__back';
+@import 'aboutus/__slider/slider/__btn/slider-btn/__next/slider-btn__next';
+@import 'aboutus/__slider/slider/__btn/slider__btn';
+@import 'aboutus/__slider/slider/__dots/slider-dots/slider-dots';
+@import 'aboutus/__slider/slider/__dots/slider-dots/__indic/slider-dots__indic';
+@import 'aboutus/__slider/slider/__dots/slider-dots/__indic/_active/slider-dots__indic_active';
+@import 'aboutus/__slider/slider/__dots/slider__dots';
+@import 'aboutus/__slider/slider/__list/slider-list/slider-list';
+@import 'aboutus/__slider/slider/__list/slider-list/__item/slider-list__item';
+@import 'aboutus/__slider/slider/__list/slider-list/__item/_active/slider-list__item_active';
+@import 'aboutus/__slider/slider/__list/slider__list';
+@import 'aboutus/__title/aboutus__title';
 
 /* --- services.html --------------------------------------------- */
+@import 'services/services';
+@import 'services/__item/item/__rhomb/item__rhomb';
+@import 'services/__item/item/__rhomb/rhomb/rhomb';
+@import 'services/__item/item/__rhomb/rhomb/__ico/rhomb__ico';
+@import 'services/__item/item/__text/item__text';
+@import 'services/__item/item/__title/item__title';
+@import 'services/__item/services__item';
+@import 'services/__line-head/services__line-head';
+@import 'services/__title/services__title';
 
 /* --- feature.html ---------------------------------------------- */
+@import 'feature/feature';
+@import 'feature/__button/feature__botton';
+@import 'feature/__item/feature__item';
+@import 'feature/__item/item/item';
+@import 'feature/__item/item/__rhomb/item__rhomb';
+@import 'feature/__item/item/__rhomb/rhomb/rhomb';
+@import 'feature/__item/item/__rhomb/rhomb/__ico/rhomb__ico';
+@import 'feature/__item/item/__text/item__text';
+@import 'feature/__item/item/__title/item__title';
+@import 'feature/__pictures/feature__pictures';
+@import 'feature/__title/feature__title';
 
 /* --- testimonials.html ----------------------------------------- */
+@import 'testimonials/testimonials';
+@import 'testimonials/__slider/slider/slider';
+@import 'testimonials/__slider/slider/__btn/slider-btn/slider-btn';
+@import 'testimonials/__slider/slider/__btn/slider-btn/__back/slider-btn__back';
+@import 'testimonials/__slider/slider/__btn/slider-btn/__next/slider-btn__next';
+@import 'testimonials/__slider/slider/__btn/slider__btn';
+@import 'testimonials/__slider/slider/__list/slider-list/slider-list';
+@import 'testimonials/__slider/slider/__list/slider-list/__item/item/item';
+@import 'testimonials/__slider/slider/__list/slider-list/__item/item/__img/item__img';
+@import 'testimonials/__slider/slider/__list/slider-list/__item/item/__rhomb/item__rhomb';
+@import 'testimonials/__slider/slider/__list/slider-list/__item/item/__rhomb/rhomb/rhomb';
+@import 'testimonials/__slider/slider/__list/slider-list/__item/item/__rhomb/rhomb/__img/rhomb__img';
+@import 'testimonials/__slider/slider/__list/slider-list/__item/item/__title/item__title';
+@import 'testimonials/__slider/slider/__list/slider-list/__item/slider-list__item';
+@import 'testimonials/__slider/slider/__list/slider__list';
+@import 'testimonials/__slider/testimonials__slider';
+@import 'testimonials/__title/testimonials__title';
 
 /* --- posts.html ------------------------------------------------ */
 
