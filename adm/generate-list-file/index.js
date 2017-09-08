@@ -40,7 +40,7 @@ var getFiles = function (dir, files_){
 
 
 var mf;
-var myCatalog = '/folder';
+var myCatalog = '**/**/src/pages/';
 
 if (fs.existsSync(process.cwd() + myCatalog)) {
     mf = getFiles(process.cwd() + myCatalog);

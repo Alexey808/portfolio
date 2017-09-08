@@ -49,14 +49,14 @@ var path = {
     src: { //Пути откуда брать исходники
         html: 'src/*.html',//'src/[^_]*.html',  //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/*.js',
-        style: 'src/*.sass',
+        style: 'src/*.scss',
         img: 'src/img/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/[^_]*.js',
-        style: 'src/**/*.sass',// 'src/**/*.sass',
+        style: 'src/**/*.scss',// 'src/**/*.sass',
         img: 'src/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -114,9 +114,9 @@ gulp.task('fonts:build', ()=> {
 gulp.task('build', [
     'html:build',
     'style:build',
-    'js:build',
-    'image:build',
-    'fonts:build'
+    'js:build'
+    // 'image:build',
+    // 'fonts:build'
 ]);
 
 // Отслеживание изменений ------------------------------------------+
@@ -125,14 +125,14 @@ gulp.task('watch', ()=> {
         gulp.start('html:build');
     });
     watch([path.watch.js], function(event, cb) {
-         gulp.start('js:build');
-     });
-    watch([path.watch.img], function(event, cb) {
-        gulp.start('image:build');
+        gulp.start('js:build');
     });
-    watch([path.watch.fonts], function(event, cb) {
-        gulp.start('fonts:build');
-    });
+    // watch([path.watch.img], function(event, cb) {
+    //     gulp.start('image:build');
+    // });
+    // watch([path.watch.fonts], function(event, cb) {
+    //     gulp.start('fonts:build');
+    // });
     watch([path.watch.style], {readDelay: 200}, function(event, cb) {
         gulp.start('style:build');
     });
