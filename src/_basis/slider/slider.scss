@@ -1,6 +1,11 @@
-@include '__btn/slider-btn/slider-btn';
-@include '__btn/slider-btn/__back/slider-btn__back';
-@include '__btn/slider-btn/__next/slider-btn__next';
 @include '__btn/slider__btn';
-@include '__dots/slider__dots';
+@include '__btn/__btn-back/slider__btn-back';
+@include '__btn/__btn-next/slider__btn-next';
+
+@include '__indic/__indic-dot/slider__indic-dot';
+@include '__indic/slider__indic';
+
 @include '__list/slider__list';
+@include '__list/__list-item/slider__list-item';
+@include '__list/__list-item/slider__list-item-img';
+@include '__list/__list-item/slider__list-item-rhomb';
