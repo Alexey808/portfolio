@@ -51,7 +51,7 @@ if (fs.existsSync(process.cwd() + myCatalog)) {
 fs.writeFileSync("get_files.txt", 
     mf.toString()
       .split(process.cwd() + '/')
-      .join('\n' + "'")
+      .join('\n' + "@import '")
       .split(',')
       .join("';")
       .split('.scss')

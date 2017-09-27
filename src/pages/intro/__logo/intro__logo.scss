@@ -1,0 +1,23 @@
+.logo {
+	position: absolute;
+	font-size: 38pt;
+	color: #fff;
+	top: 419px;
+	left: 325px;
+	transform: rotate(-45deg);
+	font-family: $textFont;
+}
+.logo__one {}
+
+.logo__two {
+	color: $colorPink;
+}
+.logo__three {}
+	
+.logo__four {
+	display: inline-block;
+	background-color: $colorPink;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}

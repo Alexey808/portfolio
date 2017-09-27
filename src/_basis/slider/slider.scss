@@ -1,11 +1,11 @@
-@include '__btn/slider__btn';
-@include '__btn/__btn-back/slider__btn-back';
-@include '__btn/__btn-next/slider__btn-next';
+@import '__btn/slider__btn';
+@import '__btn/__btn-back/slider__btn-back';
+@import '__btn/__btn-next/slider__btn-next';
 
-@include '__indic/__indic-dot/slider__indic-dot';
-@include '__indic/slider__indic';
+@import '__indic/__indic-dot/slider__indic-dot';
+@import '__indic/slider__indic';
 
-@include '__list/slider__list';
-@include '__list/__list-item/slider__list-item';
-@include '__list/__list-item/slider__list-item-img';
-@include '__list/__list-item/slider__list-item-rhomb';
+@import '__list/slider__list';
+@import '__list/__list-item/slider__list-item';
+@import '__list/__list-item/slider__list-item-img';
+@import '__list/__list-item/slider__list-item-rhomb';

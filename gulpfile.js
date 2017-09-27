@@ -57,7 +57,7 @@ var path = {
         html: 'src/**/*.html',
         js: 'src/[^_]*.js',
         style: 'src/**/*.scss',// 'src/**/*.sass',
-        img: 'src/**/*.*',
+        img: 'src/img/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     //clean: './build'
@@ -114,9 +114,9 @@ gulp.task('fonts:build', ()=> {
 gulp.task('build', [
     'html:build',
     'style:build',
-    'js:build'
-    // 'image:build',
-    // 'fonts:build'
+    'js:build',
+    'image:build',
+    'fonts:build'
 ]);
 
 // Отслеживание изменений ------------------------------------------+
@@ -127,12 +127,12 @@ gulp.task('watch', ()=> {
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
     });
-    // watch([path.watch.img], function(event, cb) {
-    //     gulp.start('image:build');
-    // });
-    // watch([path.watch.fonts], function(event, cb) {
-    //     gulp.start('fonts:build');
-    // });
+    watch([path.watch.img], function(event, cb) {
+        gulp.start('image:build');
+    });
+    watch([path.watch.fonts], function(event, cb) {
+        gulp.start('fonts:build');
+    });
     watch([path.watch.style], {readDelay: 200}, function(event, cb) {
         gulp.start('style:build');
     });

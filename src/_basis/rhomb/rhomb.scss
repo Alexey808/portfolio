@@ -1,5 +1,9 @@
-@include '__ico/rhomb__ico';
-@include '__img/rhomb__img';
-@include '__pic/rhomb__pic';
-@include '__text/rhomb__text';
-@include '__title/rhomb__title';
+@import '__ico/rhomb__ico';
+@import '__img/rhomb__img';
+@import '__pic/rhomb__pic';
+@import '__text/rhomb__text';
+@import '__title/rhomb__title';
+
+.rhomb {
+	transform: rotate(45deg);
+}

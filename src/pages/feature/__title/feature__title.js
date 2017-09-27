@@ -1,1 +1,0 @@
-console.log('connect: feature__title.js');
