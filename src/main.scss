@@ -13,36 +13,38 @@ body, .main {
 }
 
 .main {
-	width: 1210px;
+	min-width: 1210px;
 	//min-width: 1210px;
 	margin: auto;
 	//display: inline-block;
-	
-	
+
 }
-.leftCol {
-	//display: inline-block;
-	background-color: #999;
-	
-	//float: right;
-}
-.rightCol {
-	//display: inline-block;
-	background-color: #555;
-	
-	//float: left;
-}
+// .leftCol {
+// 	//display: inline-block;
+// 	background-color: #999;
+
+// 	//float: right;
+// }
+// .rightCol {
+// 	//display: inline-block;
+// 	background-color: #555;
+
+// 	//float: left;
+// }
 .grid {
-	display: inline-block;
+	//display: inline-block;
 }
-.g-wrap {
+.g-wrapPage {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0px;
-	width: 1280px;
-	border-left: 1px dashed red;
-	border-right: 1px dashed red;
+
+	// width: 1212px;
+	// border-left: 1px dashed red;
+	// border-right: 1px dashed red;
+
+	width: 1210px;
+
 }
 .g-rhomb {
 	// position: absolute;
@@ -67,7 +69,7 @@ body, .main {
 	text-align: center;
 	font-size: 33.5pt;
 	font-family: $textFont;
-}	
+}
 // @mixin button() {
 // 	position: absolute;
 // 	background-color: $colorPink;
@@ -220,4 +222,3 @@ body, .main {
 /* --- getintouch.html ------------------------------------------- */
 
 /* --- footer.html ----------------------------------------------- */
-

@@ -1,17 +1,57 @@
 .whatwedo {
 	height: 1024px;
-	padding-bottom: 40px
+	padding-bottom: 40px;
 }
 .whatwedo .title {
-	margin: 218px 0 100px;
+	margin: 218px 0 54px;
 }
-
 .whatwedo__text {
-	font-size: 16pt;
+	font-size: 16.7pt;
+	text-align: center;
+	letter-spacing: 1.8px;
+	word-spacing: 2px;
+	line-height: 2;
+	padding: 15px;
 }
-.whatwedo__rhomb {}
+.whatwedo__rhomb {
+	color: $colorPink;
+	text-align: center;
+	margin-top: 100px
+}
+.whatwedo__rhomb .rhomb {
+	margin: 0 62px;
+}
+.whatwedo__rhomb .rhomb:first-child {
+	margin-left: 0px
+}
+.whatwedo__rhomb .rhomb:last-child {
+	margin-right: 0px
+}
+.rhomb {
+	border: 3px solid $colorPink;
+	transform: rotate(-45deg);
+	width: 175px;
+	height: 175px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+}
 
-.rhomb {}
+.rhomb__title {
+	font-size: 41pt;
+	margin: 39px 0 0 36px;
+	transform: rotate(45deg);
 
-.rhomb__title {}
-.rhomb__text {}
+	//position: absolute;
+	letter-spacing: 2.5px;
+	top: 39px;
+	left: 69px;
+}
+.rhomb__text {
+	font-size: 14pt;
+	//padding-left: 30px;
+	top: 0px;
+	left: 0px;
+	transform: rotate(45deg);
+	//position: absolute;
+}
