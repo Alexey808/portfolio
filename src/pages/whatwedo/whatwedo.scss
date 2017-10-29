@@ -1,9 +1,9 @@
 .whatwedo {
-	height: 1024px;
-	padding-bottom: 40px;
+	height: 1023px;
 }
-.whatwedo .title {
-	margin: 218px 0 54px;
+.whatwedo__title {
+	// margin: 218px 0 54px;
+	padding: 218px 0 54px;
 }
 .whatwedo__text {
 	font-size: 16.7pt;
@@ -34,24 +34,27 @@
 	height: 175px;
 	text-align: center;
 	display: inline-block;
+	overflow: hidden;
+}
+.rhomb__wrap {
+	width: 262.5px; /* 175*3/2=262.5 */
+	height: 262.5px;
+	margin: -43.75px 0 0 -43.75px; /* 262.5-175=87.5/2=43.75px */
+	transform: rotate(45deg);
 	position: relative;
 }
-
 .rhomb__title {
 	font-size: 41pt;
-	margin: 39px 0 0 36px;
-	transform: rotate(45deg);
-
-	//position: absolute;
 	letter-spacing: 2.5px;
-	top: 39px;
-	left: 69px;
+	padding: 74px 0 0 1px;
 }
 .rhomb__text {
-	font-size: 14pt;
-	//padding-left: 30px;
-	top: 0px;
-	left: 0px;
-	transform: rotate(45deg);
-	//position: absolute;
+	font-size: 18.5pt;
+	padding: 0 2px 0 0;
+}
+
+.whatwedo__rhomb .rhomb:hover {
+	color: #fff;
+	background-color: $colorPink;
+	cursor: pointer;
 }
