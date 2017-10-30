@@ -6,7 +6,7 @@
   padding-top: 118px;
   padding: 118px 0 70px;
 }
-.aboutus__line-head {
+.aboutus__row-head {
   line-height: 1.9;
   font-size: 17pt;
   text-align: center;
@@ -16,8 +16,9 @@
 }
 .aboutus__line {
   padding: 0 96px;
-  color: #737373;
-  letter-spacing: 1px;
+	color: #737373;
+  word-spacing: 1px;
+  letter-spacing: 1.3px;
 }
 .aboutus__line {}
 .aboutus__btn {}
