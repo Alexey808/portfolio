@@ -15,14 +15,28 @@
   letter-spacing: 1.3px;
 }
 .aboutus__line {
-  padding: 0 96px;
 	color: #737373;
-  word-spacing: 1px;
-  letter-spacing: 1.3px;
+  font-size: 17pt;
+  padding-bottom: 44px;
+  letter-spacing: 1.4px;
+  line-height: 2;
 }
-.aboutus__line {}
+.aboutus__row {
+  width: 605px;
+  padding-top: 6px;
+  float: left;
+}
+.aboutus__row .aboutus__line:nth-child(2){
+  padding-bottom: 56px;
+}
 .aboutus__btn {}
-.aboutus__slider {}
+
+.aboutus__row .aboutus__slider {
+  padding: 0px;
+}
+.aboutus__slider {
+
+}
 .slider {}
 .slider__list {}
 .slider__list-item {}
