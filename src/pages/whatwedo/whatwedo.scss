@@ -2,7 +2,6 @@
 	height: 1023px;
 }
 .whatwedo__title {
-	// margin: 218px 0 54px;
 	padding: 218px 0 54px;
 }
 .whatwedo__text {
@@ -13,13 +12,23 @@
 	line-height: 2;
 	padding: 15px;
 }
+
+
 .whatwedo__rhomb {
 	color: $colorPink;
 	text-align: center;
-	margin-top: 100px
+	margin-top: 100px;
 }
 .whatwedo__rhomb .rhomb {
 	margin: 0 62px;
+	width: 175px;
+	height: 175px;
+	border: 3px solid $colorPink;
+}
+.whatwedo__rhomb .rhomb__wrap {
+	width: 262.5px; /* 175*3/2=262.5 */
+	height: 262.5px;
+	margin: -43.75px 0 0 -43.75px; /* 262.5-175=87.5/2=43.75px */
 }
 .whatwedo__rhomb .rhomb:first-child {
 	margin-left: 0px
@@ -27,32 +36,17 @@
 .whatwedo__rhomb .rhomb:last-child {
 	margin-right: 0px
 }
-.rhomb {
-	border: 3px solid $colorPink;
-	transform: rotate(-45deg);
-	width: 175px;
-	height: 175px;
-	text-align: center;
-	display: inline-block;
-	overflow: hidden;
-}
-.rhomb__wrap {
-	width: 262.5px; /* 175*3/2=262.5 */
-	height: 262.5px;
-	margin: -43.75px 0 0 -43.75px; /* 262.5-175=87.5/2=43.75px */
-	transform: rotate(45deg);
-	position: relative;
-}
-.rhomb__title {
+.whatwedo__rhomb .rhomb__title {
 	font-size: 41pt;
 	letter-spacing: 2.5px;
 	padding: 74px 0 0 1px;
 }
-.rhomb__text {
+.whatwedo__rhomb .rhomb__text {
 	font-size: 18.5pt;
 	padding: 0 2px 0 0;
 }
 
+/*динамика*/
 .whatwedo__rhomb .rhomb:hover {
 	color: #fff;
 	background-color: $colorPink;

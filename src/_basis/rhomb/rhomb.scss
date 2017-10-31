@@ -5,5 +5,24 @@
 @import '__title/rhomb__title';
 
 .rhomb {
-	//transform: rotate(45deg);
+	transform: rotate(-45deg);
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.rhomb__wrap {
+  transform: rotate(45deg);
+	position: relative;
+}
+
+.rhomb__title {
+  text-align: center;
+}
+
+.rhomb__text { }
+
+.rhomb__ico {
+  position: absolute;
+
 }

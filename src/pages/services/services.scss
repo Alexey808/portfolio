@@ -1,0 +1,62 @@
+.services {
+  height: 814px;
+}
+.services .title {
+  padding-top: 89px;
+}
+.services .title span {
+  padding-left: 3px;
+}
+.services__row-head {
+  font-size: 17pt;
+  text-align: center;
+  letter-spacing: 1.4px;
+  padding: 78px 0 0
+}
+.services__item {
+  // padding: 20px 70px;
+  width: 1245px
+}
+.item {
+  position: relative;
+  height: 142px;
+  width: 382px;
+  float: left;
+  margin: 83px 30px 0 0;
+
+}
+
+.item__rhomb {
+  height: 100%;
+  width: 110px;
+  float: left;
+}
+.services__item .rhomb {
+  border: 3px solid #eee;
+  width: 70px;
+  height: 70px;
+
+  margin: 11px 0 0 11px;
+}
+.services__item .rhomb__wrap {
+
+}
+.services__item .rhomb__ico {
+  i {
+    font-size: 25pt;
+    color: $colorPink;
+    padding: 7px 0 0 43px }
+}
+
+.item__title {
+  letter-spacing: 1.8px;
+	font-size: 16pt;
+	margin-left: 140px;
+	padding: 11px 0 19px 0;
+}
+.item__text {
+  line-height: 1.5;
+  font-size: 12.6pt;
+  letter-spacing: 1.4px;
+  margin: -1px 0px 0px 139px;
+}
