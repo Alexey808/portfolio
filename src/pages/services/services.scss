@@ -28,35 +28,62 @@
 
 .item__rhomb {
   height: 100%;
-  width: 110px;
+  width: 125px;
   float: left;
 }
 .services__item .rhomb {
   border: 3px solid #eee;
   width: 70px;
   height: 70px;
-
   margin: 11px 0 0 11px;
 }
-.services__item .rhomb__wrap {
 
-}
 .services__item .rhomb__ico {
   i {
     font-size: 25pt;
     color: $colorPink;
-    padding: 7px 0 0 43px }
+    padding: 7px 0 0 43px; }
+  .fa-map-marker {
+    padding: 5px 0 0 48px;
+		font-size: 30pt;	 }
 }
 
 .item__title {
-  letter-spacing: 1.8px;
-	font-size: 16pt;
-	margin-left: 140px;
-	padding: 11px 0 19px 0;
+  letter-spacing: 2px;
+	font-size: 18pt;
+	margin-left: 125px;
+	padding: 4px 0 18px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .item__text {
-  line-height: 1.5;
-  font-size: 12.6pt;
-  letter-spacing: 1.4px;
-  margin: -1px 0px 0px 139px;
+  height: 89px;
+  line-height: 1.4;
+  font-size: 15pt;
+  letter-spacing: 1px;
+  margin-left: 125px;
+  overflow: hidden;
+  text-overflow: clip;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+}
+.item__text:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35%;
+  height: 29px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 70%);
+}
+
+
+.services__item .rhomb:hover {
+  border: 3px solid $colorPink;
+  cursor: pointer;
 }

@@ -3,14 +3,13 @@
   background-color: #eee;
 }
 .aboutus__title {
-  padding-top: 118px;
   padding: 118px 0 70px;
 }
 .aboutus__row-head {
   line-height: 1.9;
   font-size: 17pt;
   text-align: center;
-  padding: 0 10px 64px;
+  padding: 0 10px 70px;
   word-spacing: 1px;
   letter-spacing: 1.3px;
 }
@@ -23,7 +22,6 @@
 }
 .aboutus__row {
   width: 605px;
-  padding-top: 6px;
   float: left;
 }
 .aboutus__row .aboutus__line:nth-child(2){
@@ -31,20 +29,43 @@
 }
 .aboutus__btn {}
 
-.aboutus__row .aboutus__slider {
-  padding: 0px;
-}
+
 .aboutus__slider {
+  padding: 14px 0 0 11px;
+}
+.slider {
+  position: relative;
+}
+.slider__list {
+  width: 594px;
+  height: 434px;
 
 }
-.slider {}
-.slider__list {}
-.slider__list-item {}
-.slider__list-item slider__list-item_active {}
-.slider__list-item {}
-.slider__btn {}
-.slider__btn-back {}
-.slider__btn-next {}
+.slider__list-item {
+  display: none;
+}
+.slider__list-item_active {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+.slider__list-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: relative;
+}
+.slider__btn-back {
+  position: absolute;
+
+}
+.slider__btn-next {
+  position: absolute;
+}
 .slider__indic {}
 .slider__indic-dot {}
 .slider__indic-dot slider__indic-dot_active {}
